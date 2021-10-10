@@ -8,8 +8,8 @@ const Chart = (props) => {
   const totalAmount = dataPointValues.reduce((prev, current) => {
     return prev + current;
   }, 0);
-  console.log(props.dataPoints);
-  console.log(totalAmount);
+  //   console.log(props.dataPoints);
+  //   console.log(totalAmount);
 
   return (
     <div className="chart">
