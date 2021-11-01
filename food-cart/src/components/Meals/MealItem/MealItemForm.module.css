@@ -1,0 +1,18 @@
+.form button {
+  background-color: #9d0208;
+  border: 1px solid #9d0208;
+  border-radius: 20px;
+  padding: 5px 25px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #6a040f;
+  border: 1px solid #6a040f;
+  transform: scale(1.1);
+}

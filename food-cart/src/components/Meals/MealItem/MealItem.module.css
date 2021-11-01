@@ -1,0 +1,24 @@
+.mealItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.mealDescription #name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.mealDescription #description {
+  font-style: italic;
+  display: block;
+}
+
+.mealDescription #price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #9d0208;
+  display: block;
+}

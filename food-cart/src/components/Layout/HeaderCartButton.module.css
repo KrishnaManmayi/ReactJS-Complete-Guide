@@ -1,0 +1,25 @@
+.button {
+  border-radius: 25px;
+  border: none;
+  background-color: #6a040f;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.75rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.button .badge {
+  border-radius: 25px;
+  background-color: #9d0208;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.button img {
+  width: 1.4rem;
+  margin-right: 1rem;
+  color: white;
+}
