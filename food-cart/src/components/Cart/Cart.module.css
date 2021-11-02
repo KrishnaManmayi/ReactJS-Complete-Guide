@@ -1,0 +1,40 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.actions {
+  padding: 10px;
+}
+
+.actions button {
+  float: right;
+  font-size: 16px;
+  border-radius: 15px;
+  margin-right: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.roundedButton {
+  border: 1px solid #9d0208;
+  background-color: white;
+  color: #9d0208;
+}
+
+.filledButton {
+  border: 1px solid #9d0208;
+  background-color: #9d0208;
+  color: white;
+}

@@ -4,10 +4,12 @@ import styles from "./MealItemForm.module.css";
 
 function MealItemForm(props) {
   const inputRef = useRef();
+
   const submitHandler = (event) => {
     event.preventDefault();
     console.log(inputRef.current.value);
   };
+
   return (
     <form className={styles.form} onSubmit={submitHandler}>
       <Input
