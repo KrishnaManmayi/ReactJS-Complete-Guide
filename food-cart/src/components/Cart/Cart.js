@@ -24,6 +24,10 @@ function Cart(props) {
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
+  const orderHandler = () => {
+    console.log(cartCtx.items);
+  };
+
   return (
     <Modal onClickBackdrop={props.onCloseCart}>
       {cartItems}
@@ -35,7 +39,9 @@ function Cart(props) {
         <button className={styles.roundedButton} onClick={props.onCloseCart}>
           Close
         </button>
-        <button className={styles.filledButton}>Order</button>
+        <button className={styles.filledButton} onClick={orderHandler}>
+          Order
+        </button>
       </div>
     </Modal>
   );
