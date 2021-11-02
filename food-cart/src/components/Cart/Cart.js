@@ -6,7 +6,7 @@ import CartContext from "../../context/cart-context";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx.items);
+
   const cartItems = (
     <ul className={styles["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -15,17 +15,21 @@ function Cart(props) {
           name={item.name}
           amount={item.amount}
           price={item.price}
+          onAdd={cartCtx.addItem.bind(null, { ...item, amount: 1 })}
+          onRemove={cartCtx.removeItem.bind(null, item.id)}
         />
       ))}
     </ul>
   );
+
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
   return (
     <Modal onClickBackdrop={props.onCloseCart}>
       {cartItems}
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>{cartCtx.totalAmount}</span>
+        <span>{totalAmount}</span>
       </div>
       <div className={styles.actions}>
         <button className={styles.roundedButton} onClick={props.onCloseCart}>
