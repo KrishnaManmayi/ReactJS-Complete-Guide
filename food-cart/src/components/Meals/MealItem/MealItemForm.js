@@ -7,7 +7,7 @@ function MealItemForm(props) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(inputRef.current.value);
+    props.onAddToCart(inputRef.current.value);
   };
 
   return (

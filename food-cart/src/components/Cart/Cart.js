@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Modal from "../UI/Modal";
 import styles from "./Cart.module.css";
 import CartItem from "./CartItem";
+import CartContext from "../../context/cart-context";
 
 function Cart(props) {
+  const cartCtx = useContext(CartContext);
+  console.log(cartCtx.items);
   const cartItems = (
     <ul className={styles["cart-items"]}>
-      {[{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }].map((item) => (
+      {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}
           name={item.name}
@@ -22,7 +25,7 @@ function Cart(props) {
       {cartItems}
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>35.62</span>
+        <span>{cartCtx.totalAmount}</span>
       </div>
       <div className={styles.actions}>
         <button className={styles.roundedButton} onClick={props.onCloseCart}>
